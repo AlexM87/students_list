@@ -1,17 +1,16 @@
 #pragma once
-#include <list>
+#include <vector>
 #include <string>
 class Database{
-    std::list <unsigned short int> listOfIndex;
-    std::list <std::string> listOfName;
-    std::list <std::string> listOfSurname;
-
-    void sortList(); //sort students list
+    std::vector <unsigned short int> vectorOfIndex;
+    std::vector <std::string> vectorOfName;
+    std::vector <std::string> vectorOfSurname;
 
 public:
 
+    void sortvector(); //sort students vector
     void addStudentBack(std::string name, std::string surname); //here adding on back with next deflaut index number
     void addStudentIndex(unsigned short int index, std::string name, std::string surname); //here adding on back with index and sort to take it in right place
     void deleteStudent(unsigned short int); // delete student with index
-    void showList(); // show students list
+    void showvector(); // show students vector
 };

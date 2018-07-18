@@ -19,7 +19,7 @@ int main()
    
     }
 
-    object.showList();
+    object.showvector();
 
     return 0;
 }
