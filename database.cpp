@@ -56,3 +56,26 @@ void Database::sortvector()
         vectorOfSurname[i] = sHelp;
 }
 }
+void Database::deleteStudent(unsigned short int index) 
+{
+    std::vector <unsigned short int> :: iterator iIndex = vectorOfIndex.begin();
+    for (unsigned int i = 0; iIndex != vectorOfIndex.end();iIndex++, i++)
+    {
+        if(vectorOfIndex[i] == index)
+        {
+            std::cout << "Delete: " << vectorOfIndex[i] << ". " << vectorOfName[i] << " " << vectorOfSurname[i] << std::endl;
+            vectorOfIndex.erase(vectorOfIndex.begin() + i);
+            vectorOfName.erase(vectorOfName.begin() + i);
+            vectorOfSurname.erase(vectorOfSurname.begin() +i);
+        }
+    }
+}
+            
+
+
+
+
+
+
+
+

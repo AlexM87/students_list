@@ -20,6 +20,7 @@ int main()
     }
     object.sortvector();
     object.showvector();
-
+    object.deleteStudent(12);
+    object.showvector();
     return 0;
 }
