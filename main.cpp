@@ -1,4 +1,4 @@
-#include "database.cpp"
+#include "database.hpp"
 #include <iostream>
 #include <string>
 int main()
