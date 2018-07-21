@@ -4,23 +4,21 @@
 int main()
 {
     std::cout << "Hello" << std::endl;
-    unsigned short int index;
-    std::string name;
-    std::string surname;
     Database object;
-    for(unsigned short int i = 1; i <= 5; i++)
-    {
-    std::cin >> index;
-    std::cin >> name;
-    std::cin >> surname;
-    std::cout << " done " << std::endl;
+    object.addStudentBack("Krzysztof", "Bela");
+    object.addStudentBack("Leszek", "Drzewo");
+    object.addStudentIndex(3, "Jan", "Kowalski");
+    object.addStudentIndex(5, "Jerzy", "Kaczka");
+    object.addStudentIndex(7, "Kazimierz", "Meduza");
+    object.addStudentIndex(12, "Roman", "Giera");
+    object.addStudentIndex(6, "Piotr", "Srebrny");
+    object.addStudentBack("Michał", "Urban");
 
-    object.addStudentIndex(index, name, surname);
-       
-    }
-    object.sortvector();
     object.showvector();
+
     object.deleteStudent(12);
+    object.deleteStudent(2);
+    object.deleteStudent(6);
     object.showvector();
     return 0;
 }

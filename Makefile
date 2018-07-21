@@ -16,3 +16,4 @@ studentsRelese.o: *.cpp *.hpp
 	$(CCXX) $(OBJS) $(STD) $(FLAGS) $(NAME) -O3
 clean:
 	rm $(OBJS) studentsRelese.o studentsDebug.o
+

@@ -20,14 +20,9 @@ void Database::showvector()
    {
        std::cout << vectorOfIndex[i] << ". " << vectorOfName[i] << " " << vectorOfSurname[i] << std::endl;
     }
+   std::cout << "----------------" << std::endl;
 }
-void Database::addStudentIndex(unsigned short int index, std::string name, std::string surname)
-{
-    vectorOfIndex.push_back(index);
-    vectorOfName.push_back(name);
-    vectorOfSurname.push_back(surname);
-}
-void Database::sortvector()
+void Database::sortVector()
 {
     int iHelp;
     std::string nHelp;
@@ -56,17 +51,36 @@ void Database::sortvector()
         vectorOfSurname[i] = sHelp;
 }
 }
+void Database::addStudentIndex(unsigned short int index, std::string name, std::string surname)
+ {
+     vectorOfIndex.push_back(index);
+     vectorOfName.push_back(name);
+     vectorOfSurname.push_back(surname);
+    sortVector();
+ }
+
 void Database::deleteStudent(unsigned short int index) 
 {
-    std::vector <unsigned short int> :: iterator iIndex = vectorOfIndex.begin();
-    for (unsigned int i = 0; iIndex != vectorOfIndex.end();iIndex++, i++)
+    for (unsigned int i = 0; i <= vectorOfIndex.size(); i++)
     {
         if(vectorOfIndex[i] == index)
         {
+
             std::cout << "Delete: " << vectorOfIndex[i] << ". " << vectorOfName[i] << " " << vectorOfSurname[i] << std::endl;
+            unsigned int iIndex = vectorOfIndex.back();
+            if (vectorOfIndex[i] == iIndex)
+            {
+              
+                vectorOfIndex.pop_back();
+                vectorOfName.pop_back();
+                vectorOfSurname.pop_back();
+            }
+            else 
+            {
             vectorOfIndex.erase(vectorOfIndex.begin() + i);
             vectorOfName.erase(vectorOfName.begin() + i);
             vectorOfSurname.erase(vectorOfSurname.begin() +i);
+            }
         }
     }
 }
