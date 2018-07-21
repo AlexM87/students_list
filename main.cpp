@@ -1,4 +1,4 @@
-#include "database.hpp"
+#include "database.cpp"
 #include <iostream>
 #include <string>
 int main()
@@ -14,11 +14,12 @@ int main()
     object.addStudentIndex(6, "Piotr", "Srebrny");
     object.addStudentBack("Michał", "Urban");
 
-    object.showvector();
-
+    object.showVector();
+    object.sortVector();
+    object.showVector();
     object.deleteStudent(12);
-    object.deleteStudent(2);
-    object.deleteStudent(6);
-    object.showvector();
+    object.deleteStudent(1);
+    object.deleteStudent(8);
+    object.showVector();
     return 0;
 }

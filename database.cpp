@@ -5,15 +5,15 @@
 
 void Database::addStudentBack(std::string name, std::string surname)
 {
-    size_t sizeOfvector = vectorOfIndex.size();
+    size_t sizeOfVector = vectorOfIndex.size();
     unsigned short int nextIndex = 0;
-        nextIndex = 1 + sizeOfvector;
-       if (sizeOfvector == 0) nextIndex = 1;
+        nextIndex = 1 + sizeOfVector;
+       if (sizeOfVector == 0) nextIndex = 1;
         vectorOfIndex.push_back(nextIndex);
         vectorOfName.push_back(name);
         vectorOfSurname.push_back(surname);
 }
-void Database::showvector()
+void Database::showVector()
 {
     std::cout << "------LIST------" << std::endl;
    for (size_t i=0; i < vectorOfIndex.size(); i++)
@@ -27,12 +27,12 @@ void Database::sortVector()
     int iHelp;
     std::string nHelp;
     std::string sHelp;
-   
-   size_t sizeOfvector = vectorOfIndex.size();
-    for (unsigned int i = 0; i < sizeOfvector; i++)
+
+   size_t sizeOfVector = vectorOfIndex.size();
+    for (unsigned int i = 0; i < sizeOfVector; i++)
     {
         unsigned int max = i;
-        for (unsigned int j = i+1; j < sizeOfvector; j++)
+        for (unsigned int j = i+1; j < sizeOfVector; j++)
         {
             if ( vectorOfIndex[j] < vectorOfIndex[max])
                 max = j;
@@ -59,7 +59,7 @@ void Database::addStudentIndex(unsigned short int index, std::string name, std::
     sortVector();
  }
 
-void Database::deleteStudent(unsigned short int index) 
+void Database::deleteStudent(unsigned short int index)
 {
     for (unsigned int i = 0; i <= vectorOfIndex.size(); i++)
     {
@@ -67,24 +67,15 @@ void Database::deleteStudent(unsigned short int index)
         {
 
             std::cout << "Delete: " << vectorOfIndex[i] << ". " << vectorOfName[i] << " " << vectorOfSurname[i] << std::endl;
-            unsigned int iIndex = vectorOfIndex.back();
-            if (vectorOfIndex[i] == iIndex)
-            {
-              
-                vectorOfIndex.pop_back();
-                vectorOfName.pop_back();
-                vectorOfSurname.pop_back();
-            }
-            else 
-            {
+
             vectorOfIndex.erase(vectorOfIndex.begin() + i);
             vectorOfName.erase(vectorOfName.begin() + i);
             vectorOfSurname.erase(vectorOfSurname.begin() +i);
-            }
+          
         }
     }
 }
-            
+
 
 
 
