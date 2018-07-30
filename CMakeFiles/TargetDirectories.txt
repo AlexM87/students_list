@@ -1,3 +1,0 @@
-/home/am/Projekt/students_list/CMakeFiles/rebuild_cache.dir
-/home/am/Projekt/students_list/CMakeFiles/Projekt.dir
-/home/am/Projekt/students_list/CMakeFiles/edit_cache.dir
