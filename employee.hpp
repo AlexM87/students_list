@@ -1,21 +1,23 @@
 #pragma once
-#include <iostream>
+#include "person.hpp"
 #include <string>
 
-struct employee
+class Employee : public Person
 {
-   std::string name;
-   std::string surname;
-   std::string address;
-   std::string sex;
-   int pesel;
+  public:
+   Employee (std::string n, std::string s, std::string a, std::string se, std::string p, int sa);
+   //~Employee(); 
+  private:
    int salary;
-
-   employee (std::string n =" ", std::string s=" ", std::string a=" ", std::string se=" ", int p= 4, int sa = 5):
-      name(n), surname(s), address(a), sex (se), pesel (p), salary (sa) {}
-
-    //Przechowywanie rekordów pracowników o strukturze: Imiê, nazwisko, PESEL, p³eæ, adres, zarobki.
 };
 
-
-
+/*
+struct compareSalary
+{
+  bool operator() (employee e1, employee e2) 
+  {
+    if(e1.salary < e2.salary) return true;
+    else return false;
+  }
+};
+*/

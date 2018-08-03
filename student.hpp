@@ -1,21 +1,12 @@
 #pragma once
+#include "person.hpp"
 #include <iostream>
 #include <string>
 
-struct student
+class Student : public Person
 {
-
-   std::string name;
-   std::string surname;
-   std::string address;
-   std::string sex;
-   int pesel;
+   Student(std::string n, std:: string s, std::string a, std::string se, std::string p, int in);
+   //~Student();
+  private:
    int index;
-
-   student(std::string n="", std:: string s ="", std::string a="", std::string se ="", int p =2, int i=2 ):
-        name(n), surname(s), address(a),sex(se), pesel(p), index(i) {}
-
-
-
-    // Przechowywanie rekordów studentów o strukturze: Imiê, nazwisko, PESEL, p³eæ, adres, nr indeksu.
 };
