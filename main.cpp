@@ -6,14 +6,16 @@ int main()
     //std::cout << "Hello" << std::endl;
     Person* firstPerson = new Employee("Jan","Kowalski","Wroclaw", "M", "90234572491", 2300);
     Person* secondPerson = new Employee("Eleonora","Nowak","Gdansk", "M", "90234572491", 2);
-    Person* thirdPerson = new Employee("Zbigniew","Swietach","Zamosc", "M", "90234572491", 2300);
-    Person* fourthPerson = new Employee("Adam","Kownacki","Lublin", "M", "90234572491", 2300);
+    Person* thirdPerson = new Student("Zbigniew","Swietach","Zamosc", "M", "90234572491", 230000);
+    Person* fourthPerson = new Student("Adam","Kownacki","Lublin", "M", "90234572491", 23400);
     
     std::cout<<firstPerson->getName()<<std::endl;
     std::cout<<firstPerson->getSurname()<<std::endl;
     std::cout<<firstPerson->getAddress()<<std::endl;
     std::cout<<firstPerson->getSex()<<std::endl;
     std::cout<<firstPerson->getPesel()<<std::endl;
+    std::cout<<firstPerson->getSalary()<<std::endl;
+    std::cout<<thirdPerson->getIndex()<<std::endl;
     return 0;
 }
 

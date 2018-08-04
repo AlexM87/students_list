@@ -14,6 +14,8 @@ class Person
    std::string getAddress();
    std::string getSex();
    std::string getPesel();
+   virtual int getIndex() = 0;
+   virtual int getSalary() = 0;
   private:
    std::string name;
    std::string surname;

@@ -5,3 +5,13 @@ Employee::Employee (std::string n, std::string s, std::string a, std::string se,
 {
   salary = sa;
 }
+
+int Employee::getSalary()
+{
+  return this->salary;
+}
+
+int Employee::getIndex()
+{
+  return 0;
+}
