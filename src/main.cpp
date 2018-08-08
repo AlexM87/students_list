@@ -1,4 +1,4 @@
-#include "database.hpp"
+#include "../inc/database.hpp"
 #include <iostream>
 #include <string>
 int main()

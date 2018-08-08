@@ -1,4 +1,4 @@
-#include "person.hpp"
+#include "../inc/person.hpp"
 
 Person::Person (std::string n, std::string s, std::string a, std::string se, std::string p)
 {

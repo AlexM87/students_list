@@ -1,5 +1,5 @@
 //#pragma once
-#include "database.hpp"
+#include "../inc/database.hpp"
 
 std::vector<Person*> peopleCollection;
 
