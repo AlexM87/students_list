@@ -10,5 +10,12 @@
 class Database{
   public:
    void addPerson(Person* person);
+   void showDatabase();
+   void findBySurname();
+   void findByPesel();
+   void sortBySalary();
+   void sortByPesel();
+   void sortBySurname();
+   void deleteByPesel();
 };
 
