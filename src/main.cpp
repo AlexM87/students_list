@@ -6,7 +6,7 @@ int main()
     //std::cout << "Hello" << std::endl;
     Database peopleDatabase;
     Person* firstPerson = new Employee("Jan","Kowalski","Wroclaw", "M", "90234572491", 2300);
-    Person* secondPerson = new Employee("Eleonora","Nowak","Gdansk", "M", "90234572491", 2);
+    Person* secondPerson = new Employee("Eleonora","Nowak","Gdansk", "M", "90234572491", 2450);
     Person* thirdPerson = new Student("Zbigniew","Swietach","Zamosc", "M", "90234572491", 230000);
     Person* fourthPerson = new Student("Adam","Kownacki","Lublin", "M", "90234572491", 23400);
     
@@ -19,8 +19,12 @@ int main()
     std::cout<<thirdPerson->getIndex()<<std::endl;
     
     peopleDatabase.addPerson(firstPerson);
+    peopleDatabase.addPerson(secondPerson);
+    peopleDatabase.addPerson(thirdPerson);
+    peopleDatabase.addPerson(fourthPerson);
     peopleDatabase.showDatabase();  
-
+    peopleDatabase.sortBySalary();
+    peopleDatabase.showDatabase();  
     return 0;
 }
 

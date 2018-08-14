@@ -19,3 +19,17 @@ class Database{
    void deleteByPesel();
 };
 
+class sortByPeselCriterion {
+
+};
+
+class sortBySalaryCriterion {
+  public:
+  bool operator()(Person* a, Person* b) {
+    return a->getSalary() > b->getSalary();
+  }
+};
+
+class sortBySurnameCriterion {
+
+};

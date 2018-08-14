@@ -11,9 +11,9 @@ void Database::addPerson(Person* person)
 void Database::showDatabase()
 {
   unsigned int size = peopleCollection.size();
-  
-  std::cout<<peopleCollection[0]->getName();
-  
+  for(int i = 0; i<size; i++) {
+    std::cout<<peopleCollection[i]->getName()<<std::endl;
+  } 
 }
 
 void Database::findBySurname()
@@ -26,6 +26,7 @@ void Database::findByPesel()
 
 void Database::sortBySalary()
 {
+  sort(peopleCollection.begin(), peopleCollection.end(), sortBySalaryCriterion());
 }
 
 void Database::sortByPesel()
