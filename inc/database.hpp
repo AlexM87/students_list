@@ -16,7 +16,7 @@ class Database{
    void sortBySalary();
    void sortByPesel();
    void sortBySurname();
-   void deleteByPesel();
+   void deleteByPesel(std::string pesel);
 };
 
 class sortByPeselCriterion {

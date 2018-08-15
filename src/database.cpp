@@ -39,6 +39,14 @@ void Database::sortBySurname()
   sort(peopleCollection.begin(), peopleCollection.end(), sortBySurnameCriterion());
 }
 
-void Database::deleteByPesel()
+void Database::deleteByPesel(std::string pesel)
 {
+  std::string tmp;
+  unsigned int size = peopleCollection.size();
+  for(int i = 0; i<size; i++) {
+    tmp = peopleCollection[i]->getPesel();
+    if(tmp == pesel) {
+      std::cout<<"something";
+    }
+  }
 }

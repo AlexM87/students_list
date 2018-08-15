@@ -27,6 +27,7 @@ int main()
     //peopleDatabase.showDatabase();  
     peopleDatabase.sortByPesel();
     peopleDatabase.showDatabase(); 
+    peopleDatabase.deleteByPesel("82032346518");
 
     return 0;
 }
