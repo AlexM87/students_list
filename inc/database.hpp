@@ -20,7 +20,10 @@ class Database{
 };
 
 class sortByPeselCriterion {
-
+  public:
+  bool operator()(Person* a, Person* b) {
+    return a->getPesel() > b->getPesel();
+  }
 };
 
 class sortBySalaryCriterion {
@@ -31,5 +34,8 @@ class sortBySalaryCriterion {
 };
 
 class sortBySurnameCriterion {
-
+  public:
+  bool operator()(Person* a, Person* b) {
+    return a->getSurname() > b->getSurname();
+  }
 };

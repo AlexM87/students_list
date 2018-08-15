@@ -5,10 +5,10 @@ int main()
 {
     //std::cout << "Hello" << std::endl;
     Database peopleDatabase;
-    Person* firstPerson = new Employee("Jan","Kowalski","Wroclaw", "M", "90234572491", 2300);
-    Person* secondPerson = new Employee("Eleonora","Nowak","Gdansk", "M", "90234572491", 2450);
-    Person* thirdPerson = new Student("Zbigniew","Swietach","Zamosc", "M", "90234572491", 230000);
-    Person* fourthPerson = new Student("Adam","Kownacki","Lublin", "M", "90234572491", 23400);
+    Person* firstPerson = new Employee("Jan","Kowalski","Wroclaw", "M", "90032302616", 2300);
+    Person* secondPerson = new Employee("Eleonora","Nowak","Gdansk", "M", "82032346518", 2450);
+    Person* thirdPerson = new Student("Zbigniew","Swietach","Zamosc", "M", "70061238900", 230000);
+    Person* fourthPerson = new Student("Adam","Kownacki","Lublin", "M", "92051360305", 23400);
     
     std::cout<<firstPerson->getName()<<std::endl;
     std::cout<<firstPerson->getSurname()<<std::endl;
@@ -23,8 +23,11 @@ int main()
     peopleDatabase.addPerson(thirdPerson);
     peopleDatabase.addPerson(fourthPerson);
     peopleDatabase.showDatabase();  
-    peopleDatabase.sortBySalary();
-    peopleDatabase.showDatabase();  
+    //peopleDatabase.sortBySalary();
+    //peopleDatabase.showDatabase();  
+    peopleDatabase.sortByPesel();
+    peopleDatabase.showDatabase(); 
+
     return 0;
 }
 

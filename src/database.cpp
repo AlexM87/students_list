@@ -17,7 +17,7 @@ void Database::showDatabase()
 }
 
 void Database::findBySurname()
-{
+{ 
 }
 
 void Database::findByPesel()
@@ -30,11 +30,13 @@ void Database::sortBySalary()
 }
 
 void Database::sortByPesel()
-{
+{ 
+  sort(peopleCollection.begin(), peopleCollection.end(), sortByPeselCriterion());
 }
 
 void Database::sortBySurname()
 {
+  sort(peopleCollection.begin(), peopleCollection.end(), sortBySurnameCriterion());
 }
 
 void Database::deleteByPesel()
