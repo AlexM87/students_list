@@ -16,12 +16,28 @@ void Database::showDatabase()
   } 
 }
 
-void Database::findBySurname()
+void Database::findBySurname(std::string surname)
 { 
+  std::string tmp;
+  unsigned int size = peopleCollection.size();
+  for(int i = 0; i<size; i++) {
+    tmp = peopleCollection[i]->getSurname();
+    if(tmp == surname) {
+      std::cout<<"something"; //tutaj wyswietlenie
+    }
+  }
 }
 
-void Database::findByPesel()
+void Database::findByPesel(std::string pesel)
 {
+  std::string tmp;
+  unsigned int size = peopleCollection.size();
+  for(int i = 0; i<size; i++) {
+    tmp = peopleCollection[i]->getPesel();
+    if(tmp == pesel) {
+      std::cout<<"something";// tutaj wyswietlenie
+    }
+  }
 }
 
 void Database::sortBySalary()
@@ -46,7 +62,17 @@ void Database::deleteByPesel(std::string pesel)
   for(int i = 0; i<size; i++) {
     tmp = peopleCollection[i]->getPesel();
     if(tmp == pesel) {
-      std::cout<<"something";
+      std::cout<<"something"; //tutaj erase
     }
   }
+}
+
+void Database::modifiySalary(std::string pesel)
+{ //settery
+
+}
+
+void Database::modifiyAddress(std::string pesel)
+{ //settery
+
 }

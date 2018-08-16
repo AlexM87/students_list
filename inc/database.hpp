@@ -11,13 +11,16 @@ class Database{
   public:
    void addPerson(Person* person);
    void showDatabase();
-   void findBySurname();
-   void findByPesel();
+   void findBySurname(std::string surname);
+   void findByPesel(std::string pesel);
    void sortBySalary();
    void sortByPesel();
    void sortBySurname();
    void deleteByPesel(std::string pesel);
+   void modifiySalary(std::string pesel);
+   void modifiyAddress(std::string pesel);
 };
+
 
 class sortByPeselCriterion {
   public:
