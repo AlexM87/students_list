@@ -14,3 +14,4 @@ int Student::getSalary()
 {
   return 0;
 }
+void Student::setSalary(int s){}

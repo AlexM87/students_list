@@ -69,10 +69,24 @@ void Database::deleteByPesel(std::string pesel)
 
 void Database::modifiySalary(std::string pesel)
 { //settery
-
+  std::string tmp;
+  unsigned int size = peopleCollection.size();
+  for(int i = 0; i<size; i++) {
+    tmp = peopleCollection[i]->getPesel();
+    if(tmp == pesel) {
+      std::cout<<"something"; //tutaj zamien
+    }
+  }
 }
 
 void Database::modifiyAddress(std::string pesel)
 { //settery
-
+  std::string tmp;
+  unsigned int size = peopleCollection.size();
+  for(int i = 0; i<size; i++) {
+    tmp = peopleCollection[i]->getPesel();
+    if(tmp == pesel) {
+      std::cout<<"something"; //tutaj zamien
+    }
+  }
 }

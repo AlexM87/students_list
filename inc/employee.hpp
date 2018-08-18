@@ -4,13 +4,14 @@
 
 class Employee : public Person
 {
+  private:
+   int salary;
   public:
    Employee (std::string n, std::string s, std::string a, std::string se, std::string p, int sa);
    //~Employee();
    int getSalary();
    int getIndex();
-  private:
-   int salary;
+   void setSalary(int s);
 };
 
 /*

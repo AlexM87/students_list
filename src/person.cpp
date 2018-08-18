@@ -33,3 +33,8 @@ std::string Person::getPesel()
 {
   return this->pesel;
 }
+
+void Person::setAddress(std::string a)
+{
+  address = a;
+}

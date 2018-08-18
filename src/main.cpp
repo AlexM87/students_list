@@ -13,8 +13,12 @@ int main()
     std::cout<<firstPerson->getName()<<std::endl;
     std::cout<<firstPerson->getSurname()<<std::endl;
     std::cout<<firstPerson->getAddress()<<std::endl;
+    firstPerson->setAddress("New York");
+    std::cout<<firstPerson->getAddress()<<std::endl;
     std::cout<<firstPerson->getSex()<<std::endl;
     std::cout<<firstPerson->getPesel()<<std::endl;
+    std::cout<<firstPerson->getSalary()<<std::endl;
+    firstPerson->setSalary(234);
     std::cout<<firstPerson->getSalary()<<std::endl;
     std::cout<<thirdPerson->getIndex()<<std::endl;
     

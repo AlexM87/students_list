@@ -9,6 +9,7 @@ class Student : public Person
    //~Student();
    int getIndex();
    int getSalary();
+   void setSalary(int s);
   private:
    int index;
 };

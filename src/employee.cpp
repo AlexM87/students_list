@@ -15,3 +15,8 @@ int Employee::getIndex()
 {
   return 0;
 }
+
+void Employee::setSalary(int s)
+{
+  salary = s;
+}
